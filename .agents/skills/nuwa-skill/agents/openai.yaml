@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nuwa Skill"
+  short_description: "Distill people or topics into Codex perspective skills."
+  default_prompt: "Use Nuwa to distill a public figure or topic into a Codex Agent Skill."
