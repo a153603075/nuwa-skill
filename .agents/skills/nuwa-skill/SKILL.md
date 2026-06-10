@@ -1,6 +1,6 @@
 ---
 name: nuwa-skill
-description: Distill a public figure, private corpus, or topic into a Codex Agent Skill. Use when the user asks to create, update, migrate, or validate a perspective skill; says phrases like “蒸馏一个人”, “造 skill”, “女娲”, “做个 XX 视角”, “XX 会怎么看”, “build a perspective skill”, “distill Paul Graham”, “create a thinking advisor”, or has a vague need such as improving decision quality, product judgment, writing, teaching, content creation, risk thinking, or career strategy and needs help choosing whose framework to distill.
+description: Distill a public figure, private corpus, or topic into a Codex Agent Skill. Use when the user asks to create, update, migrate, or validate a perspective skill; says phrases like “蒸馏一个人”, “造 skill”, “女娲”, “做个 XX 视角”, “XX 会怎么看”, “build a perspective skill”, “distill Paul Graham”, “create a thinking advisor”, or has a vague need such as improving decision quality, product judgment, writing, teaching, content creation, risk thinking, or career strategy and needs help choosing whose framework to distill. Also use when the user asks to write, rewrite, research, or outline 老鸣TV《反常识》系列 scripts, or says “按老鸣TV风格写”, “反常识系列”, “老鸣文风”, “心理学反常识口播稿”.
 ---
 
 # Nuwa Skill for Codex
@@ -15,6 +15,104 @@ Nuwa turns public evidence or user-provided source material into a runnable Code
 - State honest limits whenever evidence is thin, dated, second-hand, or conflicting.
 - Build Codex-native skills under `.agents/skills/<skill-name>/`, not `.claude/skills/`.
 - Keep generated skills self-contained: include `SKILL.md`, supporting `references/`, and optional `scripts/` inside the skill directory.
+
+## 老鸣TV写作请求优先路由
+
+当用户要求写作、改写、续写、分析、规划老鸣TV《反常识》系列文章时，优先执行本节规则，不要进入后面的通用 Nuwa Skill 创建流程。
+
+也就是说，遇到以下请求时，不要创建新的 `.agents/skills/<name>-perspective/` 技能目录，除非用户明确要求“新建一个 Skill”：
+
+- 按老鸣TV风格写一篇文章
+- 写一篇反常识系列口播稿
+- 写《反常识的某某效应》
+- 分析这个主题适不适合老鸣TV
+- 帮我做文章结构
+- 帮我根据资料写老鸣TV文稿
+
+这些任务的目标是“写文章”，不是“创建新的 Skill”。
+## 老鸣TV《反常识》系列资料研究规则
+
+当用户要求创作、修改、续写老鸣TV《反常识》系列中文口播稿，尤其是心理学、社会学、经济学、认知偏差、行为科学类主题时，必须先做资料研究，再写正文。
+
+不得直接凭记忆写稿。
+不得只依赖自媒体文章。
+不得只根据一个参考链接就完成全文。
+不得把未经核实的年份、人物、实验过程、实验结论写进正文。
+
+### 写作前必须完成资料研究
+
+正式写稿前，必须先输出“资料研究摘要”，包括：
+
+1. 本主题的核心概念是什么；
+2. 最经典、最适合口播的实验或研究有哪些；
+3. 每个实验的年份、人物、实验过程、实验结果、核心结论；
+4. 哪些资料适合写进正文，原因是什么；
+5. 哪些资料不建议写进正文，原因是什么；
+6. 是否存在争议、过度简化或常见误解；
+7. 如果当前环境无法联网，必须明确说明无法联网，并基于用户提供材料和仓库资料进行有限分析，不能假装已经查证。
+
+### 资料来源优先级
+如果当前 Codex 环境具备互联网访问能力，必须主动联网检索并交叉验证资料。不能只依赖模型记忆或仓库旧资料。
+优先使用以下资料：
+
+1. 原始论文、经典实验、研究者原文；
+2. 心理学教材、大学课程页面、权威学术机构资料；
+3. 高质量百科或专业数据库，用于交叉验证基本信息；
+4. 用户提供的原文材料；
+5. 自媒体文章只能作为选题线索，不能作为唯一证据来源。
+
+对于心理学、行为经济学、认知偏差类主题，尤其要核实：
+
+* 理论名称；
+* 提出者；
+* 发表年份；
+* 实验对象；
+* 实验过程；
+* 实验结果；
+* 后续争议或局限。
+
+### 资料筛选原则
+
+不是查到的资料都要写进正文。
+
+进入正文的资料必须满足至少一个条件：
+
+1. 反常识感强；
+2. 实验过程有画面感；
+3. 能解释日常生活中的常见现象；
+4. 能产生金句或认知反转；
+5. 能帮助观众理解“我平时为什么也会这样”。
+
+优先保留 1 到 3 个核心实验或研究。
+不要堆砌太多学术资料。
+不要为了显得专业而牺牲口播节奏。
+
+### 老鸣TV文章写作流程
+如果用户要求“一次性完成”或“直接写稿”，输出资料研究摘要后，不要停止，必须继续输出文章结构和完整口播稿。除非用户明确说“先不要写正文”。
+每次写老鸣TV《反常识》系列文稿，必须按以下顺序执行：
+
+1. 读取 `references/laoming-tv/style-guide.md`；
+2. 读取 `references/laoming-tv/` 下所有老鸣亲自修改过的定稿文稿；
+3. 围绕本次主题做资料研究；
+4. 输出资料研究摘要；
+5. 判断哪些实验、案例、生活场景适合进入正文；
+6. 先给出文章结构；
+7. 再正式写完整口播稿；
+8. 写完后自检是否符合老鸣TV风格。
+
+### 资料与风格的关系
+
+资料负责“讲什么”。
+老鸣TV风格负责“怎么讲”。
+
+不能为了模仿风格而编造资料。
+不能为了堆资料而破坏口播节奏。
+
+最终文稿必须做到：
+
+有真实可核的资料基础；
+有老鸣TV《反常识》系列的故事型表达；
+有实验、有生活、有反转、有金句、有现实启示。
 ## 老鸣TV《反常识》系列写作规则
 
 当用户要求创作、修改、续写老鸣TV《反常识》系列中文口播稿时，必须优先读取并遵守：
