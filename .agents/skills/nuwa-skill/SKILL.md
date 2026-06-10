@@ -30,7 +30,7 @@ Nuwa turns public evidence or user-provided source material into a runnable Code
 * 前景理论_定稿.md
 * 框架理论_定稿.md
 * 助推理论_定稿.md
-* 老鸣反常识作品
+* 老鸣反常识作品.md
 
 这些文件是老鸣TV《反常识》系列的最高优先级风格样本。
 
