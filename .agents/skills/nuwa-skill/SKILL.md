@@ -15,6 +15,41 @@ Nuwa turns public evidence or user-provided source material into a runnable Code
 - State honest limits whenever evidence is thin, dated, second-hand, or conflicting.
 - Build Codex-native skills under `.agents/skills/<skill-name>/`, not `.claude/skills/`.
 - Keep generated skills self-contained: include `SKILL.md`, supporting `references/`, and optional `scripts/` inside the skill directory.
+## 老鸣TV《反常识》系列写作规则
+
+当用户要求创作、修改、续写老鸣TV《反常识》系列中文口播稿时，必须优先读取并遵守：
+
+`references/laoming-tv/style-guide.md`
+
+同时必须读取：
+
+`references/laoming-tv/`
+
+目录下的所有老鸣亲自修改过的定稿文稿，包括：
+
+* 前景理论_定稿.md
+* 框架理论_定稿.md
+* 助推理论_定稿.md
+* 老鸣反常识作品
+
+这些文件是老鸣TV《反常识》系列的最高优先级风格样本。
+
+写作时必须遵守以下原则：
+
+1. 不要写成普通心理学科普；
+2. 不要一开头就下定义；
+3. 优先使用故事型反常识开头；
+4. 先制造疑问，再引出理论；
+5. 实验必须揉碎讲明白，不能一句话带过；
+6. 生活例子必须写出因果链，不能只罗列结果；
+7. 每篇至少要有 2 到 3 个点破本质的金句；
+8. 尽量找到一个中国观众熟悉的本土化表达；
+9. 结尾必须回到现实启示和行动方法；
+10. 固定结尾必须是：
+
+请锁定老鸣的《反常识》系列：世界上最危险的，不是无知，而是想当然。
+
+如果用户要求“按老鸣TV风格写”“按反常识系列写”“蒸馏老鸣TV文风”，默认优先执行本规则，并先读取 `references/laoming-tv/style-guide.md`。
 
 ## Phase 0: Route the request
 
