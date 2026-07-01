@@ -446,9 +446,66 @@ When updating rather than creating:
 1. Read the current `SKILL.md` and find the research cutoff.
 2. Preserve the existing structure and user-customized wording where possible.
 3. Research only changed dimensions: recent conversations, recent decisions, timeline, and any domain the user named.
-4. Compare new evidence with existing models:
+
+## 最新老鸣修改稿学习规则
+
+当用户要求写作、修改、分析或仿写老鸣TV《反常识》系列文章时，必须优先学习以下高优先级样本：
+
+* `references/laoming-tv/反常识8_巴纳姆效应_老鸣修改稿.md`
+* `references/laoming-tv/反常识9_达克效应_老鸣修改稿.md`
+* `references/laoming-tv/反常识10_认知失调_老鸣修改稿.md`
+* `references/laoming-tv/反常识11_从众效应_老鸣修改稿.md`
+
+其中，`反常识10_认知失调_老鸣修改稿.md` 重点学习：
+
+* 如何把实验现场快速写出来；
+* 如何把实验的关键动作提前；
+* 如何让反常识结果尽早出现；
+* 如何做到概念后置，但不拖太久；
+* 如何用生活案例解释“自洽”；
+* 如何用本土口语表达增强传播力，例如“没有花钱的不是”；
+* 如何把结尾落到现实行动，例如“及时止损”“选错之后立刻回头”。
+
+其中，`反常识11_从众效应_老鸣修改稿.md` 重点学习：
+
+* 如何快速进入实验冲突；
+* 如何用阿希实验制造开头吸引力；
+* 如何用两个实验形成主线递进；
+* 如何解释“知道正确答案，但不敢说”和“不知道答案，所以跟着大家说”的区别；
+* 如何从个体从众延伸到互联网时代的算法从众；
+* 如何删除不服务主线的材料，不为了展示资料硬塞著名实验；
+* 如何用总结句把多个实验拧成一条主线。
+
+写老鸣TV《反常识》系列时，必须遵守以下规则：
+
+1. 不要一开头讲定义，必须先进入实验现场、故事现场或生活冲突现场。
+2. 开头要尽快出现反常识冲突，让观众马上产生疑问。
+3. 实验不能只写结论，必须写清楚实验里的关键动作。
+4. 概念要后置，先让观众看到现象，再告诉观众这是什么效应。
+5. 多个实验之间必须有主线连接，不能只是资料罗列。
+6. 生活案例必须服务主线，不要堆太多例子。
+7. 案例表达要口语、本土、直接，适合短视频口播。
+8. 不要为了展示资料而硬塞实验。
+9. 如果某个实验虽然有名，但会让文章跑偏、变重、变散，可以删除或弱化。
+10. 结尾不必机械使用“三个问题”，应根据主题选择最有力量的现实提醒。
+11. 固定结尾应使用：“请锁定老鸣的《反常识》系列。世界上最危险的，不是无知，而是想当然。”
+
+特别注意：
+
+老鸣TV口播稿不是心理学百科，也不是论文综述。最重要的不是资料多，而是主线清楚、反常识强、案例贴近生活、结尾有现实警示。
+
+以后写同类文章时，优先判断：
+
+* 这个实验能不能强化主线？
+* 这个案例能不能让普通人马上理解？
+* 这段内容会不会让文章变散？
+* 观众听完后能不能记住一个清楚的现实提醒？
+
+如果材料不能服务主线，就不要写进去。
+
+5. Compare new evidence with existing models:
    - Reinforces model: add source or example.
    - Contradicts model: mark evolution or tension.
    - Reveals new repeated pattern: consider adding or replacing a model.
-5. Update latest dynamics, affected models, research sources, and cutoff date.
-6. Re-run the validation tests.
+6. Update latest dynamics, affected models, research sources, and cutoff date.
+7. Re-run the validation tests.
